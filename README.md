@@ -10,6 +10,8 @@ This code is not very clean. You can open an issue if you want me to clean it up
 
 Warning: this code has not been tested thoroughly. It may break your machine.
 
+https://deepvlad.wordpress.com/making-pcb-circuit-boards-on-desktop-cnc-genmitsu-3018/
+
 ## Probing
 
 Probing is done in probe.py.
