@@ -8,19 +8,6 @@ serialPort = serial.Serial(
 
 def readLine():
     return serialPort.readline().decode("Ascii").strip()
-    # serialString = ""  # Used to hold data coming over UART
-    # while True:
-    #     # Wait until there is data waiting in the serial buffer
-    #     if serialPort.in_waiting > 0:
-
-    #         # Read data out of the buffer until a carraige return / new line is found
-    #         serialString = serialPort.readline()
-
-    #         # Print the contents of the serial data
-    #         try:
-    #             return serialString.decode("Ascii").strip()
-    #         except:
-    #             pass
 
 
 def readAll():
@@ -106,7 +93,7 @@ def moveRoutine():
         else:
             print("Invalid command")
             continue
-        
+
         print(gcode)
         sendCommand(gcode)
         waitForIdle()
@@ -115,37 +102,6 @@ initCon()
 
 sendCommand("G21")
 
+
 # moveRoutine()
-
 scanRoutine(2, 90, 2, 59)
-# sendCommand("G38.2 F30 Z-30")
-
-# sendCommand("F10 X-20")
-
-
-# # sendCommand("X20")
-# print("get ok")
-
-# # time.sleep(3)
-# waitForIdle()
-# print("Is idle")
-
-# writeLine("?")
-# print(readAll())
-
-
-# while True:
-#     print(readLine())
-# serialString = ""  # Used to hold data coming over UART
-# while 1:
-#     # Wait until there is data waiting in the serial buffer
-#     if serialPort.in_waiting > 0:
-
-#         # Read data out of the buffer until a carraige return / new line is found
-#         serialString = serialPort.readline()
-
-#         # Print the contents of the serial data
-#         try:
-#             print(serialString.decode("Ascii"))
-#         except:
-#             pass
